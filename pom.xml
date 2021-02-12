@@ -357,7 +357,7 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>2.19.1</version>
         <executions>
-<!--          <execution>
+          <execution>
             <id>ssl-engine:default</id>
             <goals>
               <goal>integration-test</goal>
@@ -476,7 +476,7 @@
                 <include>io/vertx/it/Log4J2LogDelegateTest.java</include>
               </includes>
             </configuration>
-          </execution>-->
+          </execution>
           <execution>
             <id>no-jackson</id>
             <goals>
