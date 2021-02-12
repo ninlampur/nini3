@@ -532,9 +532,8 @@ public class ContextTest extends VertxTestBase {
     CountDownLatch latch = new CountDownLatch(contexts.length);
     for (ContextInternal context : contexts) {
       task.accept(context, () -> {
-        assertFalse(owner.get());
         try {
-          owner.set(true);
+          assertTrue(owner.compareAndSet(false, true));
           Thread.sleep(200);
         } catch (InterruptedException e) {
           Thread.currentThread().interrupt();
